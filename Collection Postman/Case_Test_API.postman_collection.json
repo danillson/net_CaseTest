@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "3d6700c6-7f8a-4ab8-bd47-68abc6c990c8",
+		"name": "Case_Test_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "788617"
+	},
+	"item": [
+		{
+			"name": "pessoa/Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nome\": \"JOSE CARLOS JUNIOR PARA EXCLUIR\",\r\n        \"dataNascimento\": \"1980-12-05T00:00:00\",\r\n        \"valorRenda\": 850.00,\r\n        \"cpf\": \"10011122222\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5283/api/pessoa/Add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5283",
+					"path": [
+						"api",
+						"pessoa",
+						"Add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pessoa/Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5283/api/pessoa/Delete?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5283",
+					"path": [
+						"api",
+						"pessoa",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pessoa/Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"nome\": \"JOSE PEDRO ANDRADE\",\r\n        \"dataNascimento\": \"2024-08-15T00:00:00\",\r\n        \"valorRenda\": 2500.20,\r\n        \"cpf\": \"00011122233\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5283/api/pessoa/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5283",
+					"path": [
+						"api",
+						"pessoa",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pessoa/List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"placa\": \"BFR-5566\",\r\n  \"ano\": \"1990\",\r\n  \"cor\": \"AZUL\",\r\n  \"modelo\": \"MONZA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5283/api/pessoa/List",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5283",
+					"path": [
+						"api",
+						"pessoa",
+						"List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pessoa/GetById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5283/api/pessoa/GetById?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5283",
+					"path": [
+						"api",
+						"pessoa",
+						"GetById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
